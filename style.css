@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+}
+
+.main-container{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: rgb(0, 174, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#start-test{
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2rem;
+    outline: 3px solid white;
+    padding: 1.3rem;
+    transition: all 0.1s linear;
+    margin-bottom: 50px;
+}
+
+#start-test:hover{
+    background: white;
+    color: black;
+    transform: scale(1.2);
+}
+
+.tutorial{font-weight: 500; font-size: 2rem;}
+
+.wait-text{
+    font-weight: 500; 
+    font-size: 4rem; 
+    display: none;
+    opacity: 0.4;
+}
+
+.round{
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+}
