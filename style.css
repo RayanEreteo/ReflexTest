@@ -38,12 +38,12 @@ body{
     padding: 1.3rem;
     transition: all 0.1s linear;
     margin-bottom: 50px;
+    animation: downToUp 0.4s forwards;
 }
 
 #start-test:hover{
-    background: white;
+    outline: 3px solid black;
     color: black;
-    transform: scale(1.2);
 }
 
 #git-redirect{
@@ -54,16 +54,17 @@ body{
     font-size: 1.5rem;
     outline: 3px solid white;
     padding: 1.3rem;
-    transition: all 0.1s linear;
+    transition: all 0.3s linear;
     position: absolute;
     margin-top: 20px;
     margin-left: 15px;
     text-decoration: none;
+    animation: downToUp 0.4s forwards;
 }
 
 #git-redirect:hover {
-    background: white;
-    color: black;
+        outline: 3px solid black;
+            color: black;
 }
 
 .tutorial{
@@ -86,9 +87,14 @@ body{
     left: 1%;
 }
 
-.remaning-time{
+.remaining-time{
     margin-top: 15px;
     font-size: 1.1rem;
+}
+
+.remaining-time,.round,.tutorial,hr{
+    opacity: 0;
+    animation: opacity 0.4s forwards 0.3s;
 }
 
 @media screen and (max-width: 464px){
@@ -108,4 +114,26 @@ body{
             align-items: center;
             justify-content: center;
         }
+}
+
+@keyframes downToUp{
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    100%{
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
